@@ -64,3 +64,62 @@ document.querySelectorAll('.unit').forEach(unit => {
     visual.appendChild(brand);
   }
 });
+
+// Showcase: lead-capture form (Web3Forms) → reveal presentation download
+const requestForm = document.getElementById('request-form');
+if (requestForm) {
+  const successPanel = document.getElementById('request-success');
+  const submitBtn = requestForm.querySelector('.rform__submit');
+  const submitLabel = requestForm.querySelector('.rform__submit-label');
+  const errorBox = requestForm.querySelector('.rform__error');
+
+  const showError = (msg) => {
+    if (!errorBox) return;
+    errorBox.textContent = msg;
+    errorBox.hidden = false;
+  };
+
+  requestForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (errorBox) errorBox.hidden = true;
+
+    if (!requestForm.checkValidity()) {
+      requestForm.reportValidity();
+      return;
+    }
+
+    const accessKey = requestForm.querySelector('input[name="access_key"]')?.value || '';
+    if (accessKey.includes('REPLACE_WITH')) {
+      showError('Form is not configured yet. Please email info@smatchmedia.uk to request the presentation.');
+      return;
+    }
+
+    submitBtn.classList.add('is-loading');
+    if (submitLabel) submitLabel.textContent = 'Sending…';
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { Accept: 'application/json' },
+        body: new FormData(requestForm),
+      });
+      const data = await res.json();
+
+      if (res.ok && data.success) {
+        requestForm.hidden = true;
+        if (successPanel) {
+          successPanel.hidden = false;
+          successPanel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } else {
+        showError((data && data.message) || 'Something went wrong. Please email info@smatchmedia.uk.');
+        submitBtn.classList.remove('is-loading');
+        if (submitLabel) submitLabel.textContent = 'Send me the presentation';
+      }
+    } catch (err) {
+      showError('Network error. Please check your connection or email info@smatchmedia.uk.');
+      submitBtn.classList.remove('is-loading');
+      if (submitLabel) submitLabel.textContent = 'Send me the presentation';
+    }
+  });
+}
