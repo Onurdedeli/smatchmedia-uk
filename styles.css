@@ -251,6 +251,39 @@ p { margin: 0 0 1em; }
   margin-top: 4px;
 }
 
+/* ===== Hero — full-bleed photo variant ===== */
+.hero--photo {
+  background: #050608;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 150px 0 84px;
+}
+.hero--photo .hero__bg {
+  background-image:
+    linear-gradient(102deg, rgba(5,6,8,.94) 0%, rgba(5,6,8,.78) 34%, rgba(5,6,8,.40) 66%, rgba(5,6,8,.55) 100%),
+    url('assets/img/hero-livingroom.jpg');
+  background-size: cover;
+  background-position: center 35%;
+}
+.hero--photo .hero__inner { grid-template-columns: 1fr; }
+.hero--photo .hero__content { max-width: 660px; }
+.hero--photo .hero__title { color: #fff; }
+.hero--photo .hero__lead { color: rgba(255,255,255,.82); }
+.hero--photo .hero__meta { border-top-color: rgba(255,255,255,.16); }
+.hero--photo .hero__meta strong { color: #fff; }
+.hero--photo .hero__meta span { color: rgba(255,255,255,.6); }
+.hero--photo .btn--primary { background: var(--teal); }
+.hero--photo .btn--primary:hover { background: var(--teal-700); box-shadow: 0 12px 30px rgba(43,182,167,.4); }
+.btn--ghost-light { color: #fff; border-color: rgba(255,255,255,.4); }
+.btn--ghost-light:hover { border-color: #fff; background: rgba(255,255,255,.1); transform: translateY(-1px); }
+
+/* Nav over the dark photo hero (top of page, before scroll) */
+.nav:not(.is-scrolled) .logo { color: #fff; }
+.nav:not(.is-scrolled) .nav__links a { color: rgba(255,255,255,.82); }
+.nav:not(.is-scrolled) .nav__links a:hover { color: #fff; }
+.nav:not(.is-scrolled) .nav__toggle span { background: #fff; }
+
 /* ===== Hero TV mock ===== */
 .hero__visual {
   display: flex;
@@ -942,6 +975,8 @@ a.cta__value:hover { color: var(--teal-300); }
   .nav.is-open .nav__links a { padding: 14px 0; border-bottom: 1px solid var(--line); }
 
   .hero { padding: 130px 0 60px; }
+  .hero--photo { padding: 120px 0 56px; min-height: auto; }
+  .hero--photo .hero__bg { background-position: center; }
   .hero__title { font-size: 2.4rem; }
   .hero__lead { font-size: 1rem; }
   .hero__meta { gap: 24px; }
