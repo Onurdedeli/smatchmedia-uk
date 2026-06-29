@@ -261,10 +261,10 @@ p { margin: 0 0 1em; }
 }
 .hero--photo .hero__bg {
   background-image:
-    linear-gradient(100deg, rgba(5,6,8,.94) 0%, rgba(5,6,8,.80) 32%, rgba(5,6,8,.42) 62%, rgba(5,6,8,.30) 100%),
-    url('assets/img/hero-viewer.jpg');
+    linear-gradient(100deg, rgba(4,5,7,.92) 0%, rgba(4,5,7,.74) 34%, rgba(4,5,7,.38) 66%, rgba(4,5,7,.28) 100%),
+    url('assets/img/hero-cinema.jpg');
   background-size: cover;
-  background-position: center 28%;
+  background-position: center center;
 }
 .hero--photo .hero__inner { grid-template-columns: 1fr; }
 .hero--photo .hero__content { max-width: 660px; }
@@ -976,7 +976,7 @@ a.cta__value:hover { color: var(--teal-300); }
 
   .hero { padding: 130px 0 60px; }
   .hero--photo { padding: 120px 0 56px; min-height: auto; }
-  .hero--photo .hero__bg { background-position: center; }
+  .hero--photo .hero__bg { background-position: 32% center; }
   .hero__title { font-size: 2.4rem; }
   .hero__lead { font-size: 1rem; }
   .hero__meta { gap: 24px; }
