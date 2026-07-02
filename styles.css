@@ -599,6 +599,40 @@ p { margin: 0 0 1em; }
 .spec li span { color: var(--ink-muted); }
 .spec li b { color: var(--ink); font-weight: 600; text-align: right; }
 
+/* Standard ad-slot visual (used on every format card) */
+.unit__visual--std {
+  flex-direction: column;
+  gap: 12px;
+  background: linear-gradient(135deg, #15171e 0%, #0a0c12 100%);
+}
+.adslot__tag {
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .22em;
+  color: var(--teal-300);
+  border: 1px solid rgba(43,182,167,.45);
+  padding: 5px 14px;
+  border-radius: 999px;
+}
+.adslot__brand {
+  display: inline-flex;
+  align-items: flex-end;
+  gap: 4px;
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -.04em;
+  color: #fff;
+  text-transform: lowercase;
+}
+.adslot__brand i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--teal);
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
 /* Unit visuals */
 .unit__visual--marquee {
   background: linear-gradient(135deg, #5b1a8b 0%, #2d0f4a 100%);
@@ -892,6 +926,78 @@ p { margin: 0 0 1em; }
 a.cta__value:hover { color: var(--teal-300); }
 .cta__card .btn--primary { background: var(--teal); }
 .cta__card .btn--primary:hover { background: var(--teal-700); }
+
+/* Contact details under the CTA copy */
+.cta__contact { display: flex; flex-direction: column; gap: 6px; margin-top: 26px; }
+.cta__contact a { color: #fff; font-weight: 600; font-size: 1.05rem; }
+.cta__contact a:hover { color: var(--teal-300); }
+.cta__contact span { color: rgba(255,255,255,.55); font-size: .92rem; }
+
+/* Contact form */
+.cform { display: grid; gap: 16px; }
+.cform[hidden] { display: none; }
+.cform__hp { position: absolute; left: -9999px; opacity: 0; pointer-events: none; }
+.cform__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cform__field { display: flex; flex-direction: column; gap: 7px; }
+.cform__field > span {
+  font-size: .78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.55);
+}
+.cform__field input,
+.cform__field textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: .95rem;
+  color: #fff;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 10px;
+  padding: 12px 14px;
+  transition: border-color .2s ease, background .2s ease, box-shadow .2s ease;
+}
+.cform__field textarea { resize: vertical; min-height: 96px; }
+.cform__field input::placeholder,
+.cform__field textarea::placeholder { color: rgba(255,255,255,.35); }
+.cform__field input:focus,
+.cform__field textarea:focus {
+  outline: none;
+  border-color: var(--teal);
+  background: rgba(255,255,255,.08);
+  box-shadow: 0 0 0 3px rgba(43,182,167,.18);
+}
+.cform__submit { margin-top: 6px; }
+.cform__submit.is-loading { opacity: .7; pointer-events: none; }
+.cform__error {
+  margin: 0;
+  font-size: .88rem;
+  color: #ff7a9c;
+  background: rgba(255,12,108,.12);
+  border: 1px solid rgba(255,12,108,.3);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+.cform-success { text-align: center; padding: 16px 6px; }
+.cform-success__icon {
+  width: 56px; height: 56px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+  background: rgba(43,182,167,.18);
+  color: var(--teal-300);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+.cform-success h3 { color: #fff; font-size: 1.25rem; margin-bottom: 8px; }
+.cform-success p { color: rgba(255,255,255,.65); font-size: .95rem; margin: 0; }
+
+@media (max-width: 720px) {
+  .cform__row { grid-template-columns: 1fr; }
+}
 
 /* ===== Footer ===== */
 .footer {
