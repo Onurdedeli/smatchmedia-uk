@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=7" />
 </head>
 <body>
 
@@ -24,7 +24,6 @@
         <a href="#coverage">Coverage</a>
         <a href="#contact">Contact Us</a>
       </nav>
-      <a href="#contact" class="btn btn--primary nav__cta">Get in touch</a>
       <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -49,11 +48,6 @@
         <div class="hero__ctas">
           <a href="#units" class="btn btn--primary">Explore CTV ad formats</a>
           <a href="#contact" class="btn btn--ghost btn--ghost-light">Talk to our team →</a>
-        </div>
-        <div class="hero__meta">
-          <div><strong>100M+</strong><span>Active TVs</span></div>
-          <div><strong>200+</strong><span>Premium Channels &amp; TV Partners</span></div>
-          <div><strong>100%</strong><span>Viewability</span></div>
         </div>
       </div>
     </div>
@@ -113,7 +107,7 @@
         <div class="connector">
           <div class="connector__icon" aria-hidden="true">📺</div>
           <h4>TV Brands</h4>
-          <p>Westinghouse, Philips, JVC, RCA, Telefunken, Magnavox, Aiwa and 400+ more.</p>
+          <p>Westinghouse, Philips, JVC, RCA, Telefunken, Magnavox, Aiwa and more.</p>
         </div>
         <div class="connector">
           <div class="connector__icon" aria-hidden="true">🎬</div>
@@ -125,48 +119,6 @@
           <h4>Advertisers</h4>
           <p>Brands seeking digital precision with the impact of the biggest screen.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section class="section services" id="services">
-    <div class="container">
-      <div class="section__head">
-        <span class="eyebrow">What We Do</span>
-        <h2 class="section__title">Next-generation marketing, end-to-end.</h2>
-        <p class="section__lead">
-          Smatch Media combines data, creative and media buying under one roof —
-          from AI-driven targeting to creative production, media delivery
-          and transparent reporting.
-        </p>
-      </div>
-      <div class="why__grid">
-        <article class="card">
-          <span class="card__num">01</span>
-          <h3>Data-Driven Marketing</h3>
-          <p>Audience-first planning powered by first-party signals, behavioural data and AI-led modelling.</p>
-        </article>
-        <article class="card">
-          <span class="card__num">02</span>
-          <h3>AI-Powered Targeting</h3>
-          <p>24/7 auto-optimisation, smart targeting and machine-learning bidding for every campaign.</p>
-        </article>
-        <article class="card">
-          <span class="card__num">03</span>
-          <h3>Creative for CTV</h3>
-          <p>Mastheads, banners and in-stream video produced and trafficked specifically for the TV canvas.</p>
-        </article>
-        <article class="card">
-          <span class="card__num">04</span>
-          <h3>Multi-Channel Reach</h3>
-          <p>CTV at the core, extended through digital, in-game and audio for full-funnel impact.</p>
-        </article>
-        <article class="card">
-          <span class="card__num">05</span>
-          <h3>Transparent Reporting</h3>
-          <p>Real-time dashboards, IAB-compliant measurement and brand-safe environments by default.</p>
-        </article>
       </div>
     </div>
   </section>
@@ -215,9 +167,11 @@
 
         <article class="unit" data-cat="masthead">
           <div class="unit__brand">Roku</div>
-          <div class="unit__visual unit__visual--std">
-            <span class="adslot__tag">AD</span>
-            <span class="adslot__brand">smatch<i></i></span>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--portrait">AD</div>
+              <div class="tvm__apps"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
           </div>
           <div class="unit__body">
             <h3>Roku Marquee Ad</h3>
@@ -233,9 +187,11 @@
 
         <article class="unit" data-cat="masthead">
           <div class="unit__brand">Whale TV</div>
-          <div class="unit__visual unit__visual--std">
-            <span class="adslot__tag">AD</span>
-            <span class="adslot__brand">smatch<i></i></span>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--masthead">AD</div>
+              <div class="tvm__apps"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
           </div>
           <div class="unit__body">
             <h3>Whale TV Masthead</h3>
@@ -251,9 +207,10 @@
 
         <article class="unit" data-cat="masthead">
           <div class="unit__brand">Whale TV</div>
-          <div class="unit__visual unit__visual--std">
-            <span class="adslot__tag">AD</span>
-            <span class="adslot__brand">smatch<i></i></span>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--full">AD</div>
+            </div>
           </div>
           <div class="unit__body">
             <h3>Home Page Take Over</h3>
@@ -269,9 +226,11 @@
 
         <article class="unit" data-cat="banner">
           <div class="unit__brand">Whale TV</div>
-          <div class="unit__visual unit__visual--std">
-            <span class="adslot__tag">AD</span>
-            <span class="adslot__brand">smatch<i></i></span>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--tile">AD</div>
+              <div class="tvm__apps"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
           </div>
           <div class="unit__body">
             <h3>Whale TV Banner</h3>
@@ -287,9 +246,10 @@
 
         <article class="unit" data-cat="video">
           <div class="unit__brand">Whale TV</div>
-          <div class="unit__visual unit__visual--std">
-            <span class="adslot__tag">AD</span>
-            <span class="adslot__brand">smatch<i></i></span>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--full">AD</div>
+            </div>
           </div>
           <div class="unit__body">
             <h3>Whale TV Video</h3>
@@ -303,11 +263,33 @@
           </div>
         </article>
 
+        <article class="unit" data-cat="video">
+          <div class="unit__brand">Whale TV</div>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--native">AD</div>
+              <div class="tvm__apps"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
+          </div>
+          <div class="unit__body">
+            <h3>Home Screen Native Video</h3>
+            <p class="unit__desc">Autoplay video embedded natively in the home screen — motion that grabs attention before a click.</p>
+            <ul class="spec">
+              <li><span>Ad Type</span><b>Home Screen Native Video</b></li>
+              <li><span>Format</span><b>MP4</b></li>
+              <li><span>Dimensions</span><b>1920 × 1080</b></li>
+              <li><span>Playback</span><b>Autoplay · Muted</b></li>
+            </ul>
+          </div>
+        </article>
+
         <article class="unit" data-cat="masthead">
           <div class="unit__brand">Vidaa</div>
-          <div class="unit__visual unit__visual--std">
-            <span class="adslot__tag">AD</span>
-            <span class="adslot__brand">smatch<i></i></span>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--masthead">AD</div>
+              <div class="tvm__apps"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
           </div>
           <div class="unit__body">
             <h3>Vidaa Prime Banner</h3>
@@ -323,9 +305,11 @@
 
         <article class="unit" data-cat="banner">
           <div class="unit__brand">Vidaa</div>
-          <div class="unit__visual unit__visual--std">
-            <span class="adslot__tag">AD</span>
-            <span class="adslot__brand">smatch<i></i></span>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--subbanner">AD</div>
+              <div class="tvm__apps"><i></i><i></i><i></i><i></i><i></i></div>
+            </div>
           </div>
           <div class="unit__body">
             <h3>Vidaa Flash Banner</h3>
@@ -341,9 +325,10 @@
 
         <article class="unit" data-cat="video">
           <div class="unit__brand">Vidaa</div>
-          <div class="unit__visual unit__visual--std">
-            <span class="adslot__tag">AD</span>
-            <span class="adslot__brand">smatch<i></i></span>
+          <div class="unit__visual unit__tv">
+            <div class="tvm">
+              <div class="tvm__ad tvm__ad--full">AD</div>
+            </div>
           </div>
           <div class="unit__body">
             <h3>Vidaa Break Video</h3>
@@ -465,14 +450,14 @@
         <div class="footer__addr">
           <strong>Smatch Media UK</strong>
           <span>WeWork Aviation House, London</span>
-          <span>info@smatchmedia.uk · +44 7435 446 581</span>
+          <span>info@smatchmedia.uk</span>
         </div>
       </div>
       <div class="footer__cols">
         <div>
           <h5>Company</h5>
           <a href="#about">About</a>
-          <a href="#services">Services</a>
+          <a href="#units">CTV Ad Formats</a>
           <a href="#contact">Contact Us</a>
         </div>
         <div>
