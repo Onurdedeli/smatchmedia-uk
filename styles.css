@@ -638,6 +638,7 @@ p { margin: 0 0 1em; }
 .tvm__ad--subbanner { left: 8%; right: 8%; bottom: 34%; height: 12%; }
 .tvm__ad--native    { top: 13%; left: 8%; width: 42%; height: 46%; }
 .tvm__ad--portrait  { top: 10%; left: 8%; width: 24%; bottom: 24%; }
+.tvm__ad--qr        { top: 16%; right: 9%; width: 22%; height: 40%; letter-spacing: .12em; }
 
 /* Standard ad-slot visual (used on every format card) */
 .unit__visual--std {
