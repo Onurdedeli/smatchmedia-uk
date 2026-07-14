@@ -90,7 +90,7 @@ if (contactForm) {
 
     const accessKey = contactForm.querySelector('input[name="access_key"]')?.value || '';
     if (accessKey.includes('REPLACE_WITH')) {
-      showError('Form is not configured yet. Please email info@smatchmedia.uk.');
+      showError('Form is not configured yet. Please email info@smatch.media.');
       return;
     }
 
@@ -109,12 +109,12 @@ if (contactForm) {
         contactForm.hidden = true;
         if (successPanel) successPanel.hidden = false;
       } else {
-        showError((data && data.message) || 'Something went wrong. Please email info@smatchmedia.uk.');
+        showError((data && data.message) || 'Something went wrong. Please email info@smatch.media.');
         submitBtn.classList.remove('is-loading');
         if (submitLabel) submitLabel.textContent = 'Send message';
       }
     } catch (err) {
-      showError('Network error. Please check your connection or email info@smatchmedia.uk.');
+      showError('Network error. Please check your connection or email info@smatch.media.');
       submitBtn.classList.remove('is-loading');
       if (submitLabel) submitLabel.textContent = 'Send message';
     }
